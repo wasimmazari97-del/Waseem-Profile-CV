@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixed Profile CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #007bff; 
+            margin: 0;
+            padding: 30px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+            overflow: hidden; 
+        }
+
+        .container {
+            background-color: white;
+            width: 1100px; 
+            padding: 30px 40px; 
+            border-radius: 8px;
+            display: flex;
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
+            max-height: 90vh;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .sidebar {
+            width: 280px; 
+            padding-left: 40px; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Photo bar ke liye container class add ki gayi hai */
+        .img-wrapper {
+            position: relative;
+            width: 220px;
+            height: 140px;
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 100%;      
+            height: 100%;     
+            object-fit: cover; 
+            border-radius: 2px;
+            display: block;
+        }
+
+        /* Change Photo bar ki styling */
+        .change-photo-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .sidebar h3 { 
+            font-size: 12px; 
+            color: #666; 
+            margin-top: 15px; 
+            margin-bottom: 5px; 
+        }
+
+        .sidebar ul { 
+            list-style: none; 
+            padding: 0; 
+            font-size: 12px; 
+            color: #444; 
+            margin: 0 0 15px 0;
+        }
+
+        .main-content {
+            flex: 1;
+            padding-left: 20px;
+            padding: 5px; 
+        }
+        h2{
+            padding-bottom: 5px;
+        }
+        p {
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        h3{
+            padding-bottom: 5px;
+        }
+
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .edit-btn {
+            background-color: #efefef;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 11px;
+            cursor: pointer;
+            color: #555;
+            font-weight:bold;
+        }
+
+        .tabs {
+            margin-top: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            width: 80%; 
+        }
+
+        .tab-about {
+            color: #333;
+            font-weight: bold;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-right: 20px;
+            font-size: 14px;
+        }
+
+        .tab-timeline {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        table {
+            width: 90%; 
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 8px 0;
+            font-size: 13px;
+        }
+
+        .label {
+            font-weight: bold;
+            width: 30%;
+            color: #333;
+        }
+
+        .value {
+            color: #0062cc;
+            font-weight: bold; 
+            padding-left: 80px; 
+        }
+
+        li { 
+            margin-bottom: 3px; 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <div class="img-wrapper">
+            <img src="mazari.png" alt="User Image" class="profile-img">
+            <div class="change-photo-bar">Change Photo</div>
+        </div>
+        
+        <h3>WORK LINK</h3>
+        <ul>
+            <li>Website Link</li>
+            <li>Bootsnipp Profile</li>
+            <li>Bootply Profile</li>
+        </ul>
+
+        <h3>SKILLS</h3>
+        <ul>
+            <li>Web Designer</li>
+            <li>Web Developer</li>
+            <li>WordPress</li>
+            <li>WooCommerce</li>
+            <li>PHP, .Net</li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header-row">
+            <div>
+                <h2 style="margin: 0; font-size: 24px;">Waseem Mazari</h2>
+                <p style="color: #0062cc; margin: 3px 0; font-size: 15px;">Web Developer and Designer</p>
+                <p style="font-size: 11px; color: #777; margin: 0;">RANKINGS: 8/10</p>
+            </div>
+            <button class="edit-btn">Edit Profile</button>
+        </div>
+
+        <div class="tabs">
+            <span class="tab-about">About</span>
+            <span class="tab-timeline">Timeline</span>
+        </div>
+
+        <table>
+            <tr>
+                <td class="label">User Id</td>
+                <td class="value">Waseem 123</td>
+            </tr>
+            <tr>
+                <td class="label">Name</td>
+                <td class="value">Waseem Mazari</td>
+            </tr>
+            <tr>
+                <td class="label">Email</td>
+                <td class="value">waseemmazari@gmail.com</td>
+            </tr>
+            <tr>
+                <td class="label">Phone</td>
+                <td class="value">03368325358</td>
+            </tr>
+            <tr>
+                <td class="label">Profession</td>
+                <td class="value">Web Developer and Designer</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
